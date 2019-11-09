@@ -862,7 +862,6 @@ namespace Nop.Services.ExportImport
                 xmlWriter.WriteString("ParentGroupedProductId", product.ParentGroupedProductId, IgnoreExportPoductProperty(p => p.ProductType));
                 xmlWriter.WriteString("VisibleIndividually", product.VisibleIndividually, IgnoreExportPoductProperty(p => p.VisibleIndividually));
                 xmlWriter.WriteString("Name", product.Name);
-                xmlWriter.WriteString("Author", product.Author);
                 xmlWriter.WriteString("ShortDescription", product.ShortDescription);
                 xmlWriter.WriteString("FullDescription", product.FullDescription);
                 xmlWriter.WriteString("AdminComment", product.AdminComment, IgnoreExportPoductProperty(p => p.AdminComment));
@@ -1175,7 +1174,6 @@ namespace Nop.Services.ExportImport
                 new PropertyByName<Product>("ParentGroupedProductId", p => p.ParentGroupedProductId, IgnoreExportPoductProperty(p => p.ProductType)),
                 new PropertyByName<Product>("VisibleIndividually", p => p.VisibleIndividually, IgnoreExportPoductProperty(p => p.VisibleIndividually)),
                 new PropertyByName<Product>("Name", p => p.Name),
-                new PropertyByName<Product>("Author", p => p.Author),
                 new PropertyByName<Product>("ShortDescription", p => p.ShortDescription),
                 new PropertyByName<Product>("FullDescription", p => p.FullDescription),
                 //vendor can't change this field

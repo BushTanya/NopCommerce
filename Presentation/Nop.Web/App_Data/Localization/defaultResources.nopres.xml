@@ -2997,17 +2997,11 @@
   <LocaleResource Name="Admin.Catalog.Products.Fields.Name">
     <Value>Product name</Value>
   </LocaleResource>
-    <LocaleResource Name="Admin.Catalog.Products.Fields.Author">
-    <Value>Author</Value>
-  </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Products.Fields.Name.Hint">
     <Value>The name of the product.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Products.Fields.Name.Required">
     <Value>Please provide a name.</Value>
-  </LocaleResource>
-  <LocaleResource Name="Admin.Catalog.Products.Fields.Author.Required">
-    <Value>Please provide an author.</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Products.Fields.NotifyAdminForQuantityBelow">
     <Value>Notify for qty below</Value>
@@ -3320,9 +3314,6 @@
   </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Products.List.SearchProductName">
     <Value>Product name</Value>
-  </LocaleResource>
-  <LocaleResource Name="Admin.Catalog.Products.List.SearchProductAuthor">
-    <Value>Author</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Catalog.Products.List.SearchProductName.Hint">
     <Value>A product name.</Value>
@@ -10059,9 +10050,6 @@
   <LocaleResource Name="Admin.CurrentCarts.Product">
     <Value>Product</Value>
   </LocaleResource>
-  <LocaleResource Name="Admin.CurrentCarts.ProductAuthor">
-    <Value>Product</Value>
-  </LocaleResource>
   <LocaleResource Name="Admin.CurrentCarts.Quantity">
     <Value>Quantity</Value>
   </LocaleResource>
@@ -11972,9 +11960,6 @@
   </LocaleResource>
   <LocaleResource Name="Admin.Orders.Products.ProductName">
     <Value>Product name</Value>
-  </LocaleResource>
-  <LocaleResource Name="Admin.Orders.Products.Author">
-    <Value>Author</Value>
   </LocaleResource>
   <LocaleResource Name="Admin.Orders.Products.Quantity">
     <Value>Quantity</Value>

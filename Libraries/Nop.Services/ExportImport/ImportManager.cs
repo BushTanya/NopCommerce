@@ -1299,9 +1299,6 @@ namespace Nop.Services.ExportImport
                             case "Name":
                                 product.Name = property.StringValue;
                                 break;
-                            case "Author":
-                                product.Author = property.StringValue;
-                                break;
                             case "ShortDescription":
                                 product.ShortDescription = property.StringValue;
                                 break;

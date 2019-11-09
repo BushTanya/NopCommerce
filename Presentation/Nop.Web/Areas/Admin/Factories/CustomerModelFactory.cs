@@ -992,7 +992,6 @@ namespace Nop.Web.Areas.Admin.Factories
 
                 //fill in additional values (not existing in the entity)
                 shoppingCartItemModel.ProductName = item.Product.Name;
-                shoppingCartItemModel.ProductAuthor = item.Product.Author;
                 shoppingCartItemModel.Store = _storeService.GetStoreById(item.StoreId)?.Name ?? "Unknown";
                 shoppingCartItemModel.AttributeInfo =
                     _productAttributeFormatter.FormatAttributes(item.Product, item.AttributesXml);

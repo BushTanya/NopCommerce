@@ -20,9 +20,6 @@ namespace Nop.Web.Areas.Admin.Models.ShoppingCart
         [NopResourceDisplayName("Admin.CurrentCarts.Product")]
         public string ProductName { get; set; }
 
-        [NopResourceDisplayName("Admin.CurrentCarts.ProductAuthor")]
-        public string ProductAuthor { get; set; }
-
         public string AttributeInfo { get; set; }
 
         [NopResourceDisplayName("Admin.CurrentCarts.UnitPrice")]

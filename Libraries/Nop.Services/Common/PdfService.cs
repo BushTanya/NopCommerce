@@ -1501,7 +1501,6 @@ namespace Nop.Services.Common
             foreach (var product in products)
             {
                 var productName = _localizationService.GetLocalized(product, x => x.Name, lang.Id);
-                var productAuthor = _localizationService.GetLocalized(product, x => x.Author, lang.Id);
                 var productDescription = _localizationService.GetLocalized(product, x => x.FullDescription, lang.Id);
 
                 var productTable = new PdfPTable(1) { WidthPercentage = 100f };
@@ -1512,8 +1511,6 @@ namespace Nop.Services.Common
                 }
 
                 productTable.AddCell(new Paragraph($"{productNumber}. {productName}", titleFont));
-                productTable.AddCell(new Paragraph(" "));
-                productTable.AddCell(new Paragraph($"{productAuthor}", titleFont));
                 productTable.AddCell(new Paragraph(" "));
                 productTable.AddCell(new Paragraph(HtmlHelper.StripTags(HtmlHelper.ConvertHtmlToPlainText(productDescription, decode: true)), font));
                 productTable.AddCell(new Paragraph(" "));

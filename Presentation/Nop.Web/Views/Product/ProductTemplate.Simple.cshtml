@@ -65,14 +65,6 @@
                                 @Model.Name
                             </h1>
                         </div>
-                        @if (!string.IsNullOrEmpty(Model.Author))
-                        {
-                        <div class="product-author">
-                            <h3>
-                                @Html.Raw(Model.Author)
-                            </h3>
-                        </div>
-                        }
                         @if (!string.IsNullOrEmpty(Model.ShortDescription))
                         {
                             <div class="short-description">

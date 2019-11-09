@@ -625,7 +625,6 @@ namespace Nop.Services.Tests.ExportImport
                     ParentGroupedProductId = 0,
                     VisibleIndividually = true,
                     Name = "TestProduct",
-                    Author = "TestAuthor",
                     ShortDescription = "TestShortDescription",
                     FullDescription = "TestFullDescription",
                     VendorId = 1,
