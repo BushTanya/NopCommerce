@@ -1,0 +1,5 @@
+﻿{
+  "DataProvider": "sqlserver",
+  "DataConnectionString": "Data Source=ASUS\\SQLEXPRESS;Initial Catalog=NopTestDatabase;Integrated Security=True;Persist Security Info=False",
+  "RawDataSettings": {}
+}
