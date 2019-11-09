@@ -358,6 +358,7 @@ namespace Nop.Web.Factories
                 VendorName = vendors.FirstOrDefault(v => v.Id == sci.Product.VendorId)?.Name ?? string.Empty,
                 ProductId = sci.Product.Id,
                 ProductName = _localizationService.GetLocalized(sci.Product, x => x.Name),
+                ProductAuthor = _localizationService.GetLocalized(sci.Product, x => x.Author),
                 ProductSeName = _urlRecordService.GetSeName(sci.Product),
                 Quantity = sci.Quantity,
                 AttributeInfo = _productAttributeFormatter.FormatAttributes(sci.Product, sci.AttributesXml),
@@ -495,6 +496,7 @@ namespace Nop.Web.Factories
                 Sku = _productService.FormatSku(sci.Product, sci.AttributesXml),
                 ProductId = sci.Product.Id,
                 ProductName = _localizationService.GetLocalized(sci.Product, x => x.Name),
+                ProductAuthor = _localizationService.GetLocalized(sci.Product, x => x.Author),
                 ProductSeName = _urlRecordService.GetSeName(sci.Product),
                 Quantity = sci.Quantity,
                 AttributeInfo = _productAttributeFormatter.FormatAttributes(sci.Product, sci.AttributesXml),
@@ -1027,6 +1029,7 @@ namespace Nop.Web.Factories
                             Id = sci.Id,
                             ProductId = sci.Product.Id,
                             ProductName = _localizationService.GetLocalized(sci.Product, x => x.Name),
+                            ProductAuthor = _localizationService.GetLocalized(sci.Product, x => x.Author),
                             ProductSeName = _urlRecordService.GetSeName(sci.Product),
                             Quantity = sci.Quantity,
                             AttributeInfo = _productAttributeFormatter.FormatAttributes(sci.Product, sci.AttributesXml)

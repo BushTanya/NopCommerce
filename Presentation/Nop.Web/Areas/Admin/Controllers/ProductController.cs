@@ -154,6 +154,10 @@ namespace Nop.Web.Areas.Admin.Controllers
                     localized.Name,
                     localized.LanguageId);
                 _localizedEntityService.SaveLocalizedValue(product,
+                    x => x.Author,
+                    localized.Author,
+                    localized.LanguageId);
+                _localizedEntityService.SaveLocalizedValue(product,
                     x => x.ShortDescription,
                     localized.ShortDescription,
                     localized.LanguageId);
@@ -2136,6 +2140,7 @@ namespace Nop.Web.Areas.Admin.Controllers
             else if (model.SearchPublishedId == 2)
                 overridePublished = false;
 
+            
             var products = _productService.SearchProducts(
                 categoryIds: categoryIds,
                 manufacturerId: model.SearchManufacturerId,

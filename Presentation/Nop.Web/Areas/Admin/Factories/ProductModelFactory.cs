@@ -702,6 +702,18 @@ namespace Nop.Web.Areas.Admin.Factories
                 pageIndex: searchModel.Page - 1, pageSize: searchModel.PageSize,
                 overridePublished: overridePublished);
 
+            if (searchModel.SearchProductAuthor != null)
+            {
+                var sortedProducts = new PagedList<Product>(new List<Product>(), products.PageIndex, products.PageSize);
+                var authorKeywords = searchModel.SearchProductAuthor.Trim().Split(' ');
+                foreach (Product product in products)
+                {
+                    if (authorKeywords.Any(el => product.Author.ToLower().Contains(el.ToLower())))
+                        sortedProducts.Add(product);
+                }
+
+                products = sortedProducts;
+            }
             //prepare list model
             var model = new ProductListModel().PrepareToGrid(searchModel, products, () =>
             {
@@ -786,6 +798,7 @@ namespace Nop.Web.Areas.Admin.Factories
                 localizedModelConfiguration = (locale, languageId) =>
                 {
                     locale.Name = _localizationService.GetLocalized(product, entity => entity.Name, languageId, false, false);
+                    locale.Author = _localizationService.GetLocalized(product, entity => entity.Author, languageId, false, false);
                     locale.FullDescription = _localizationService.GetLocalized(product, entity => entity.FullDescription, languageId, false, false);
                     locale.ShortDescription = _localizationService.GetLocalized(product, entity => entity.ShortDescription, languageId, false, false);
                     locale.MetaKeywords = _localizationService.GetLocalized(product, entity => entity.MetaKeywords, languageId, false, false);
